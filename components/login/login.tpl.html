@@ -1,0 +1,26 @@
+
+<form  layout="row" layout-align="center center" style="margin-top:100px"> 
+    <div layout="column" layout-padding ng-cloak md-whiteframe="17"  flex-sm="45" flex-gt-sm="35" flex-gt-md="25">
+      <br/>
+<md-content>
+        <md-input-container>
+        <md-icon class="mdi mdi-account"></md-icon> 
+        <label for="username"> Username </label>
+        <input type="text" id="username" md-autofocus ng-model="username">
+      </md-input-container>
+      <br/>
+      <md-input-container>
+        <md-icon class="mdi mdi-account-key"></md-icon>
+        <label for="password"> Password </label>
+        <input type="password" id="password" ng-model="password">
+      </md-input-container>
+      <br/>
+      <md-button class="md-primary" ng-click="login()">
+          Login
+      </md-button>
+      <md-button class="md-warn"  type="reset" >
+          Cancel
+      </md-button>
+</md-content>
+    </div>
+</form>
