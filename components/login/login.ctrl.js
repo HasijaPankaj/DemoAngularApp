@@ -12,11 +12,11 @@
       //login
       $scope.login = function(){
           $scope.user = {
-            email: 'pankaj@gmail.com',
-            password: 'admin@123'  
+            username: 'admin',
+            password: 'admin'  
           };
           //console.log($scope.user);
-        /*var loginKey = localStorageService.get("login");
+        var loginKey = localStorageService.get("login");
         if(loginKey.username == $scope.user.username && loginKey.password == $scope.user.password){
           localStorageService.set('toDoList', []);
           localStorageService.set('inProgressList', []);
@@ -24,14 +24,14 @@
 
           $state.go("classifieds");
           showToast("Login Successful!!");
-          $scope.clearFields();
+          //$scope.clearFields();
         }
         else{
           showToast("Wrong credentials!!!!!");
-          $scope.clearFields();
-        }*/
+          //$scope.clearFields();
+        }
 
-          $http.post('http://10.0.10.95:3000/users/login_user.json?user='+JSON.stringify($scope.user)).then(function success(response) {
+          /*$http.post('http://10.0.10.95:3000/users/login_user.json?user='+JSON.stringify($scope.user)).then(function success(response) {
               $scope.response = response;
               if(response.data.status == 'success')
                   {
@@ -45,7 +45,7 @@
             }, function error(response) {
               console.log('connection failed');
               showToast("Unable to establish connection!!");
-            });
+            });*/
       };
 
       $scope.clearFields = function(){
